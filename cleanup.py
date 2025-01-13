@@ -6,7 +6,7 @@ def clean_filename(filename_to_clean):
     Remove text inside parentheses () and brackets [] from the filename.
     """
     cleanup = re.sub(r"[\(\[].*?[\)\]]", "", filename_to_clean).split(" ")
-    del cleanup[-2]
+    del cleanup[-2] # This regex leaves some spaces at the end, but before the .mp3
     print(f"Cleaned: '{filename_to_clean}' -> '{cleanup}'")
     cleanup.pop(-1)
     songEnd = cleanup.pop(-1)

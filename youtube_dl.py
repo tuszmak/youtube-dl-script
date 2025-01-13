@@ -14,10 +14,10 @@ while True:
         break
 
     # Define yt-dlp options for MP3 conversion
-    options = "--extract-audio --audio-format mp3"  # Extract audio and convert to MP3
+    OPTIONS = "--extract-audio --audio-format mp3"
 
     # Build the full command
-    command = f'"{yt_dlp_path}" {options} {url}'
+    command = f'"{yt_dlp_path}" {OPTIONS} {url}'
 
     try:
         # Run the command
